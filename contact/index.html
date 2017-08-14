@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PattayaPI</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111">
+
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<header>
+    <img class="logo" src="../img/pattaya.png">
+    <div class="slideshow">
+        <div class="slide">
+            <img src="../img/slideshow1.jpg">
+        </div>
+        <div class="slide">
+            <img src="../img/slideshow2.jpg">
+            <span>Experts in Thai lady investigations</span>
+        </div>
+        <div class="slide">
+            <img src="../img/slideshow3.jpg">
+            <span>Missing people investigations</span>
+        </div>
+        <div class="slide">
+            <img src="../img/slideshow4.jpg">
+            <span>Thailand debt recovery specialists</span>
+        </div>
+        <script>
+            var slides = document.querySelectorAll(".slideshow .slide");
+            var slide = 0;
+
+            slides[0].style.display = "block";
+            setTimeout(function() {
+                slides[0].style.opacity = 1;
+                slides[0].style.transform = "translateY(0px)";
+            });
+
+            setInterval(function() {
+                slides[(slide + 1) % 4].style.display = "block";
+                setTimeout(function() {
+                    slides[slide].style.zIndex = 1;
+                    slides[(slide + 1) % 4].style.zIndex = 2;
+                    slides[(slide + 1) % 4].style.opacity = 1;
+                    slides[(slide + 1) % 4].style.transform = "translateY(0px)";
+                }, 100);
+
+                setTimeout(function() {
+                    slides[slide].style.display = "none";
+                    slides[slide].style.transform = "translateY(-100px)";
+                    slides[slide].style.opacity = 0;
+                    slide = ++slide % 4;
+                }, 500);
+            }, 3000);
+        </script>
+    </div>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../whatwedo/index.html">What we do</a></li>
+        <li><a href="../testimonials/index.html">Testimonials</a></li>
+        <li><a href="../faq/index.html">FAQ</a></li>
+        <li><a href="https://pattayapi.com/blog/">Blog</a></li>
+        <li><span style="color: #fff">Contact</span></li>
+    </ul>
+    <button class="menubtn" onclick="document.querySelector('.menu').style.display = 'block'">Click here to navigate</button>
+</header>
+
+<ul class="menu">
+    <button class="close material-icons" onclick="this.parentNode.style.display = 'none'">close</button>
+    <li><img src="../img/favicon.png" height="100"></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../whatwedo/index.html">What we do</a></li>
+    <li><a href="../testimonials/index.html">Testimonials</a></li>
+    <li><span style="color: #fff">FAQ</span></li>
+    <li><a href="https://pattayapi.com/blog/">Blog</a></li>
+    <li><a href="../contact/index.html">Contact</a></li>
+</ul>
+
+<section class="content" style="display: block; margin: 50px auto">
+    <h1>Contact us</h1>
+    We are here to help, please fill in the form below and we will reply to you as soon as possible. All contact with PattayaPI is private and confidential. We will never share your case or e-mail address with anyone.
+
+    <div class="sendmessage">
+    <form name="form" method="post" action="/contact" onsubmit="return Validate()">
+        <input placeholder="Name" name="name" style="background: rgba(165, 177, 198, 0.5)">
+        <input placeholder="Email-address" name="email" style="background: rgba(165, 177, 198, 0.5)">
+        <textarea placeholder="Message" name="message" style="background: rgba(165, 177, 198, 0.5)"></textarea>
+        <br>
+        <input class="submit" type="submit" id="submit" name="submit" value="Send">
+    </form>
+    </div>
+
+    <script>
+        function Validate()
+        {var name=document.form.name;var email=document.form.email;var message=document.form.message;if(name.value=="")
+        {window.alert("ERROR: Please enter your name. (Can be 'Anonymous')");name.focus();return false;}
+            if(email.value=="")
+            {window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+            if(email.value.indexOf("@",0)<0)
+            {window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+            if(email.value.indexOf(".",0)<0)
+            {window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+            if(message.value=="")
+            {window.alert("ERROR: Please enter a message.");message.focus();return false;}
+            return true;
+        }
+    </script>
+</section>
+
+<footer>
+    <ul class="nav">
+        <li>Home</li>
+        <li>What we do</li>
+        <li>Testimonials</li>
+        <li>FAQ</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </ul>
+    <img src="../img/iwwa.png" height="100" style="opacity: .7">
+    <p style="color: #888">Copyright © 2017 PattayaPI & associates</p>
+    <p style="color: #888">Website by <a>Gees Brouwer</a></p>
+</footer>
+
+<script>
+    var contact = document.querySelector(".contact-float");
+
+    onscroll = function() {
+        if(document.body.scrollTop > 4000) {
+            contact.style.top = contact.getBoundingClientRect().top + document.body.scrollTop + "px";
+            contact.style.position = "absolute";
+        } else if(document.body.scrollTop > 680) {
+            contact.style.top = contact.getBoundingClientRect().top + "px";
+            contact.style.position = "fixed";
+        } else {
+            contact.style.position = "absolute";
+            contact.style.top = "800px";
+        }
+    }
+
+    onscroll();
+</script>
+</body>
+</html>

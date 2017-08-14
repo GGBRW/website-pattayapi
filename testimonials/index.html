@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PattayaPI</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111">
+
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<header>
+    <img class="logo" src="../img/pattaya.png">
+    <div class="slideshow">
+        <div class="slide">
+            <img src="../img/slideshow1.jpg">
+        </div>
+        <div class="slide">
+            <img src="../img/slideshow2.jpg">
+            <span>Experts in Thai lady investigations</span>
+        </div>
+        <div class="slide">
+            <img src="../img/slideshow3.jpg">
+            <span>Missing people investigations</span>
+        </div>
+        <div class="slide">
+            <img src="../img/slideshow4.jpg">
+            <span>Thailand debt recovery specialists</span>
+        </div>
+        <script>
+            var slides = document.querySelectorAll(".slideshow .slide");
+            var slide = 0;
+
+            slides[0].style.display = "block";
+            setTimeout(function() {
+                slides[0].style.opacity = 1;
+                slides[0].style.transform = "translateY(0px)";
+            });
+
+            setInterval(function() {
+                slides[(slide + 1) % 4].style.display = "block";
+                setTimeout(function() {
+                    slides[slide].style.zIndex = 1;
+                    slides[(slide + 1) % 4].style.zIndex = 2;
+                    slides[(slide + 1) % 4].style.opacity = 1;
+                    slides[(slide + 1) % 4].style.transform = "translateY(0px)";
+                }, 100);
+
+                setTimeout(function() {
+                    slides[slide].style.display = "none";
+                    slides[slide].style.transform = "translateY(-100px)";
+                    slides[slide].style.opacity = 0;
+                    slide = ++slide % 4;
+                }, 500);
+            }, 3000);
+        </script>
+    </div>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../whatwedo/index.html">What we do</a></li>
+        <li><span style="color: #fff">Testimonials</span></li>
+        <li><a href="../faq/index.html">FAQ</a></li>
+        <li><a href="https://pattayapi.com/blog/">Blog</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+    </ul>
+    <button class="menubtn" onclick="document.querySelector('.menu').style.display = 'block'">Click here to navigate</button>
+</header>
+
+<ul class="menu">
+    <button class="close material-icons" onclick="this.parentNode.style.display = 'none'">close</button>
+    <li><img src="../img/favicon.png" height="100"></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../whatwedo/index.html">What we do</a></li>
+    <li><span style="color: #fff">Testimonials</span></li>
+    <li><a href="../faq/index.html">FAQ</a></li>
+    <li><a href="https://pattayapi.com/blog/">Blog</a></li>
+    <li><a href="../contact/index.html">Contact</a></li>
+</ul>
+
+<section class="content testimonals">
+    <h1>Testimonials</h1>
+    If you have instructed us in the past and would like to add your testimonial, please let us know.
+    <div class="quote">
+        <img src="img/quote.png" height="64">
+        I just wanted to send my thanks to you and your team for the work you have done. The photographs of my wife with her boyfriend are going to be very valuable with our divorce proceedings. I have no doubt your work has saved me thousands of dollars.
+        <p>— Michael, USA</p>
+    </div>
+    <div class="quote">
+        <img src="img/quote.png" height="64">
+        Pattaya PI have really gone the extra mile for me. Ian has kept me up to date with the investigation and supported me through the process and results. Thank you so much.
+        <p>— Robert, Australia</p>
+    </div>
+    <div class="quote">
+        <img src="img/quote.png" height="64">
+        First I contacted a different company that were rude and unhelpful. PattayaPI were cheaper and after 2 hours the job was done. I would recommend this company to anyone
+        <p>— Kimmo, Sweden</p>
+    </div>
+    <div class="quote">
+        <img src="img/quote.png" height="64">
+        Ian, I can't thank you and your team enough. The peace of mind you have given me was worth every penny, I can breath again!
+        <p>— Anonymous</p>
+    </div>
+</section>
+
+<section class="contact-float">
+    <h1>Contact us</h1>
+    Contact us now for a free consultation, we are always happy to help.
+    <a class="msgbtn" href="../contact/index.html">
+        <i class="material-icons">mail_outline</i>
+        <span style="position: relative; top: -7px; left: 5px">Send message</span>
+    </a>
+    <span style="color: #aaa">Email:</span> <a>info@pattayapi.com</a>
+    <br>
+    <span style="color: #aaa">Phone:</span> <a>+66 080 982 0845</a>
+    <br>
+    24/7 available (native english speaker)
+    <img src="../img/logo_small.png" height="40" style="opacity: 1; margin-top: 25px">
+    <img src="../img/jacoglaw.jpg" height="60">
+</section>
+
+<footer>
+    <ul class="nav">
+        <li>Home</li>
+        <li>What we do</li>
+        <li>Testimonials</li>
+        <li>FAQ</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </ul>
+    <img src="../img/iwwa.png" height="100" style="opacity: .7">
+    <p style="color: #888">Copyright © 2017 PattayaPI & associates</p>
+    <p style="color: #888">Website by <a>Gees Brouwer</a></p>
+</footer>
+
+<script>
+    var contact = document.querySelector(".contact-float");
+
+    onscroll = function() {
+        if(document.body.scrollTop > 4000) {
+            contact.style.top = contact.getBoundingClientRect().top + document.body.scrollTop + "px";
+            contact.style.position = "absolute";
+        } else if(document.body.scrollTop > 680) {
+            contact.style.top = contact.getBoundingClientRect().top + "px";
+            contact.style.position = "fixed";
+        } else {
+            contact.style.position = "absolute";
+            contact.style.top = "800px";
+        }
+    }
+
+    onscroll();
+</script>
+</body>
+</html>

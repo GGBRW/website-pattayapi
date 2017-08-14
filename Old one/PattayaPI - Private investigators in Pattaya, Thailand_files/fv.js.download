@@ -1,0 +1,12 @@
+function Validate()
+{var name=document.form.name;var email=document.form.email;var message=document.form.message;if(name.value=="")
+{window.alert("ERROR: Please enter your name. (Can be 'Anonymous')");name.focus();return false;}
+if(email.value=="")
+{window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+if(email.value.indexOf("@",0)<0)
+{window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+if(email.value.indexOf(".",0)<0)
+{window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+if(message.value=="")
+{window.alert("ERROR: Please enter a message.");message.focus();return false;}
+return true;}

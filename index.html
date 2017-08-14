@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PattayaPI</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111">
+
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/pattaya.png">
+        <div class="slideshow">
+            <div class="slide">
+                <img src="img/slideshow1.jpg">
+            </div>
+            <div class="slide">
+                <img src="img/slideshow2.jpg">
+                <span>Experts in Thai lady investigations</span>
+            </div>
+            <div class="slide">
+                <img src="img/slideshow3.jpg">
+                <span>Missing people investigations</span>
+            </div>
+            <div class="slide">
+                <img src="img/slideshow4.jpg">
+                <span>Thailand debt recovery specialists</span>
+            </div>
+            <script>
+                var slides = document.querySelectorAll(".slideshow .slide");
+                var slide = 0;
+
+                slides[0].style.display = "block";
+                setTimeout(function() {
+                slides[0].style.opacity = 1;
+                slides[0].style.transform = "translateY(0px)";
+                });
+
+                setInterval(function() {
+                    slides[(slide + 1) % 4].style.display = "block";
+                    setTimeout(function() {
+                        slides[slide].style.zIndex = 1;
+                        slides[(slide + 1) % 4].style.zIndex = 2;
+                        slides[(slide + 1) % 4].style.opacity = 1;
+                        slides[(slide + 1) % 4].style.transform = "translateY(0px)";
+                    }, 100);
+
+                    setTimeout(function() {
+                        slides[slide].style.display = "none";
+                        slides[slide].style.transform = "translateY(-100px)";
+                        slides[slide].style.opacity = 0;
+                        slide = ++slide % 4;
+                    }, 500);
+                }, 3000);
+            </script>
+        </div>
+        <ul>
+            <li><span style="color: #fff">Home</span></li>
+            <li><a href="whatwedo/index.html">What we do</a></li>
+            <li><a href="testimonials/index.html">Testimonials</a></li>
+            <li><a href="faq/index.html">FAQ</a></li>
+            <li><a href="https://pattayapi.com/blog/">Blog</a></li>
+            <li><a href="contact/index.html">Contact</a></li>
+        </ul>
+        <button class="menubtn" onclick="document.querySelector('.menu').style.display = 'block'">Click here to navigate</button>
+    </header>
+
+    <ul class="menu">
+        <button class="close material-icons" onclick="this.parentNode.style.display = 'none'">close</button>
+        <li><img src="img/favicon.png" height="100"></li>
+        <li><span style="color: #fff">Home</span></li>
+        <li><a href="whatwedo/index.html">What we do</a></li>
+        <li><a href="testimonials/index.html">Testimonials</a></li>
+        <li><a href="faq/index.html">FAQ</a></li>
+        <li><a href="https://pattayapi.com/blog/">Blog</a></li>
+        <li><a href="contact/index.html">Contact</a></li>
+    </ul>
+
+    <section class="content home">
+        <h1>Welcome to Pattaya Private Investigations (PI)</h1>
+        We offer private investigative services in Pattaya and surrounding areas. We have access to state of the art investigative tools and technology to help us, and you, during our investigations. We are able to utilize cutting edge equipment, such as electronic monitoring systems, GPS tracking and hidden cameras. Our most important asset in conducting investigations in Thailand however is our contacts. We work with a wide range of Thai operators from all classes and walks of life. Foreigners in Thailand cannot blend into the crowd or into Thai society; and in order to provide a totally discreet service we must use a wide range of Thai investigators. It has taken us years to build a strong network of trustworthy investigators in Thailand, using these individuals we are able to provide a service which is truly miles ahead of our competitors.
+        <br>
+        <iframe class="video" frameborder="0" src="https://www.dailymotion.com/embed/video/x5q27e7" allowfullscreen></iframe>
+        <h1>We can help with</h1>
+        <ul>
+            <li>Cheating Thai lady investigations</li>
+            <li>Foreign man cheating on his or girlfriend or wife</li>
+            <li>Missing people in Thailand</li>
+            <li>Debt recovery</li>
+            <li>Fraudster investigations & litigation</li>
+            <li>Social media analysis and investigation</li>
+            <li>Evidence gathering for civil litigation</li>
+            ...And much more!
+        </ul>
+
+        <h1>Are you having problems with a Thai lady?</h1>
+        Much of the work we do is resolving Thai lady issues for foreigners. We are well experienced in all types of Thai lady problems; and the latest scams used against foreign men. We understand the issues foreigners have with Thai ladies, such as bar girls, and can help confirm your suspicions or rid them. It isn't nice to suspect your girlfriend or wife of cheating; we can remove your suspicions and help you sleep easier. The sooner you instruct us to work for you, the sooner we can resolve problems for you. If you suspect your Thai spouse of lying or cheating, it’s important to act on those suspicions as soon as possible.
+
+        <h1>Warning signs to look for in your Thai girlfriend</h1>
+        <ul>
+            <li>You met her in a beer bar, disco, a Go-Go, or nightclub (Lucifer, iBar, Mixx)</li>
+            <li>She has two or more cellphones</li>
+            <li>Not answering your calls or messages for extended periods</li>
+            <li>Hearing another man's voice in the background when you call</li>
+            <li>Hides her phone screen when you are together</li>
+            <li>Signs in and out of Facebook (has multiple accounts)</li>
+            <li>Involved with any type of illegal activity</li>
+        </ul>
+        <br>
+        Not all ladies in Thailand are dishonest; many are genuine and loyal to their foreign boyfriends or husbands. However it can be often be impossible to discover the truth, especially when you are out of the country. Using the experience and resources of an investigator in Pattaya can be the quickest and easiest way to discover the truth.
+
+        We can answer your questions acting discreetly and with total confidence, saving you costly mistakes. Ladies in Pattaya have a reputation of being promiscuous; it's important to protect yourself and your assets by making sure you aren't being lied to. If you do have any suspicions about your Thai girlfriend, get in contact with us now for free, friendly advice on your situation.
+
+        <h1>Is your husband visiting Thailand? What is he doing there?</h1>
+        Pattaya has often been described as the sex tourism capital of the world with over 27,000 active prostitutes. You may think that your husband is not appealing to Thai women if he’s over 50, balding, or overweight. This could not be further from the truth. Often men will visit Thailand for business, or other reasons, and are blown away by the nature of the sex industry. There are so many prostitutes in Pattaya that they are forced to be competitive and will literally fight for their customers. They show faux affection for men that is very convincing and can be overwhelming, especially if visiting Thailand for the first time. This temptation can prove too much for many men, even if they had first visited Thailand with other intentions.
+
+        <h1>Warning signs to look for in your husband or boyfriend</h1>
+        <ul>
+            <li>Involved with nightlife in Thailand</li>
+            <li>Loud disco music when he calls</li>
+            <li>Not in his hotel room late at night</li>
+            <li>Stays in guest friendly hotels</li>
+            <li>Conceals his internet use</li>
+            <li>Seems distant after returning from Thailand</li>
+        </ul>
+        <br>
+        We will track the activities of your boyfriend or husband in Thailand and keep you up to date through every step of the process. Our surveillance is totally covert and he will never know he is the target of an investigation. If you are having suspicions about your spouse’s activates in Thailand, get in touch with us today and start your investigation.
+
+        <h1>Scam artists in Thailand</h1>
+        Thailand can attract undesirable people, often foreigners, that run financial scams from the country. We can put you in touch with the best lawyers in Thailand and take instructions where appropriate. Scam artists may believe that they can act with impunity in Thailand, that is not the case. We endeavor to help victims of financial fraud where we are able to do so and tirelessly investigate any scam artist or fraudster in Thailand. Please get in contact with us for free advice on your situation.
+
+        <h1>Debt recovery in Thailand</h1>
+        Pattaya PI has a close working relationship with Jason Coghlan, who has built a formidable reputation collecting debts for foreigners across Thailand, and with a 100 percent success rate. Some expats may think there is no accountability for leaving unpaid debts in Thailand; we aim to show that this is not the case. If you're owed money anywhere in Thailand, get in touch with us and see how we can help you.
+
+        <h1>The best private investigators in Thailand</h1>
+        We are experts in stealth intelligence gathering and employ techniques used by law enforcement agencies across the world. All of our Thai operatives are fully trained and practiced in these techniques. We already have feet on the ground in Pattaya and are ready to take your instructions now. Your investigation will be carried out with the help of our extensive contacts in Thailand which we have established over a number of years and with the upmost skill and dedication. Much of the work undertaken by PattayaPI is outsourced to us from rival companies. We prefer that our customers contact us directly, rather than use middlemen who are based elsewhere in the country, or even abroad.
+
+        <h1>Our commitment to you</h1>
+        We always work in the best interest of our clients and pride ourselves on going the extra mile. PattayaPI is owned and managed by foreigners and we know how tough it can be for Westerners in this part of the world. We are not judgemental and can help you no matter how small, or large your query. We endeavor to help anyone that contacts us to the absolute best of our abilities. All contact with us is strictly private and confidential; only the managing director of PattayaPI will ever know the details of your case, this is never passed onto our surveillance teams or employees. Every situation is unique and we judge every case on its own merits. Contact us now for a free consultation.
+
+        <h1>Get in touch with us</h1>
+        PattayaPI works on a fixed fee basis with no hidden costs or charges. Fill in the form below to get in touch with us, or call us on +66 092 375 5367 (native English speaker). All contact with PattayaPI is private and confidential. We will never share your case or e-mail address with anyone.
+    </section>
+
+    <section class="contact-float">
+        <h1>Contact us</h1>
+        Contact us now for a free consultation, we are always happy to help.
+        <a class="msgbtn" href="contact/index.html">
+            <i class="material-icons">mail_outline</i>
+            <span style="position: relative; top: -7px; left: 5px">Send message</span>
+        </a>
+        <span style="color: #aaa">Email:</span> <a>info@pattayapi.com</a>
+        <br>
+        <span style="color: #aaa">Phone:</span> <a>+66 080 982 0845</a>
+        <br>
+        24/7 available (native english speaker)
+        <img src="img/logo_small.png" height="40" style="opacity: 1; margin-top: 25px">
+        <img src="img/jacoglaw.jpg" height="60">
+    </section>
+
+    <div class="sendmessage">
+        <form name="form" method="post" action="/contact" onsubmit="return Validate()">
+            <input placeholder="Name" name="name">
+            <input placeholder="Email-address" name="email">
+            <textarea placeholder="Message" name="message"></textarea>
+            <br>
+            <input class="submit" type="submit" id="submit" name="submit" value="Send">
+        </form>
+    </div>
+
+    <script>
+        function Validate()
+        {var name=document.form.name;var email=document.form.email;var message=document.form.message;if(name.value=="")
+        {window.alert("ERROR: Please enter your name. (Can be 'Anonymous')");name.focus();return false;}
+            if(email.value=="")
+            {window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+            if(email.value.indexOf("@",0)<0)
+            {window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+            if(email.value.indexOf(".",0)<0)
+            {window.alert("ERROR: Please enter a valid e-mail address.");email.focus();return false;}
+            if(message.value=="")
+            {window.alert("ERROR: Please enter a message.");message.focus();return false;}
+            return true;
+        }
+    </script>
+
+    <footer>
+        <ul class="nav">
+            <li>Home</li>
+            <li>What we do</li>
+            <li>Testimonials</li>
+            <li>FAQ</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+        <img src="img/iwwa.png" height="100" style="opacity: .7">
+        <p style="color: #888">Copyright © 2017 PattayaPI & associates</p>
+        <p style="color: #888">Website by <a>Gees Brouwer</a></p>
+    </footer>
+
+    <script>
+        var contact = document.querySelector(".contact-float");
+
+        onscroll = function() {
+             if(document.body.scrollTop > 4000) {
+                contact.style.top = contact.getBoundingClientRect().top + document.body.scrollTop + "px";
+                contact.style.position = "absolute";
+            } else if(document.body.scrollTop > 680) {
+                contact.style.top = contact.getBoundingClientRect().top + "px";
+                contact.style.position = "fixed";
+            } else {
+                contact.style.position = "absolute";
+                contact.style.top = "800px";
+            }
+        }
+
+        onscroll();
+    </script>
+</body>
+</html>
