@@ -72,7 +72,7 @@
 
 <ul class="menu">
     <button class="close material-icons" onclick="this.parentNode.style.display = 'none'">close</button>
-    <li><img src="../img/favicon.png" height="100"></li>
+    <li><img src="../img/favicon.png" height="60"></li>
     <li><a href="../index.html">Home</a></li>
     <li><a href="../whatwedo/index.html">What we do</a></li>
     <li><a href="../testimonials/index.html">Testimonials</a></li>
@@ -125,24 +125,5 @@
     <p style="color: #888">Copyright © 2017 PattayaPI & associates</p>
     <p style="color: #888">Website by <a>Gees Brouwer</a></p>
 </footer>
-
-<script>
-    var contact = document.querySelector(".contact-float");
-
-    onscroll = function() {
-        if(document.body.scrollTop > 4000) {
-            contact.style.top = contact.getBoundingClientRect().top + document.body.scrollTop + "px";
-            contact.style.position = "absolute";
-        } else if(document.body.scrollTop > 680) {
-            contact.style.top = contact.getBoundingClientRect().top + "px";
-            contact.style.position = "fixed";
-        } else {
-            contact.style.position = "absolute";
-            contact.style.top = "800px";
-        }
-    }
-
-    onscroll();
-</script>
 </body>
 </html>

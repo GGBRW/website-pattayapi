@@ -72,7 +72,7 @@
 
 <ul class="menu">
     <button class="close material-icons" onclick="this.parentNode.style.display = 'none'">close</button>
-    <li><img src="../img/favicon.png" height="100"></li>
+    <li><img src="../img/favicon.png" height="60"></li>
     <li><a href="../index.html">Home</a></li>
     <li><a href="../whatwedo/index.html">What we do</a></li>
     <li><a href="../testimonials/index.html">Testimonials</a></li>
@@ -89,6 +89,24 @@
     Anyone can call themselves a private investigator, it takes real skill that has to be learned and honed to achieve results in this field. Our Thai investigators receive training from a chartered security consultant before they start work with us and are trained in acting discreetly and professionally to meet the standard of our company. We realize that the results of our investigations impact on peoples' lives, and this is a job we take very seriously.
     <h2>How long will it take you to start investigating and report back to me?</h2>
     After we have discussed your needs we are able to start investigating immediately and report back to you in a matter of hours. We already have feet on the ground in Pattaya, the sooner you contact us the sooner we can act and get you results.
+    <h2>Will the target know they are being investigated?</h2>
+    Absolutely not. We have never had a case compromised, this is because most of our investigators are skilled Thai people. It is not possible for a foreigner to investigate someone in Thailand without being noticed; it is for this reason that we mostly use Thai detectives that are able to blend into any environment and go unnoticed.
+    <h2>Can you investigate ladies that are not working in bars?</h2>
+    Yes. Most of the ladies we investigate are outside the bar scene.
+    <h2>Do you investigate ladyboys?</h2>
+    Yes, absolutely.
+    <h2>How much do you charge?</h2>
+    Each case is unique and priced accordingly. We will agree a fixed price with you before starting work. In some cases we do not charge a fee until we have been able to secure evidence or intelligence on your behalf. If our quote is outside your budget, we will work with you to find a budget friendly solution.
+    <h2>Can I speak to you with WhatsApp/Skype/Line?</h2>
+    Yes, no problem. Just include your username when submitting our <a href="../contact/index.html" style="text-decoration: none; color: #000">contact form</a>.
+    <h2>Will a foreigner work in my case?</h2>
+    In the majority of cases we rely on Thai private investigators. In most cases foreigners cannot gather intelligence without gaining unwanted attention; it is essential for us to use trained Thai detectives to keep your case as discreet and private as possible. Some situations do require a foreign investigator, and we are equally as prepared for these scenarios. A native English speaker will manage your case and be in contact with you at all times.
+    <h2>Is your service confidential?</h2>
+    Yes, our service is totally confidential and private. Only the managing director of PattayaPI has access to case information, this is kept private and not shared with investigators working for us. We will never discuss your case with anyone, period.
+    <h2>Can I trust you?</h2>
+    Our business is built on trust, we will always act in the best interests of our clients and keep cases confidential. Please see our testimonials and contact us to get started with your case.
+    <h2>What cases do you NOT accept?</h2>
+    We cannot work on behalf of any law enforcement agency. Equally we are unable to investigate cases involving the police, politicians or army.
 </section>
 
 <section class="contact-float">
@@ -125,18 +143,19 @@
     var contact = document.querySelector(".contact-float");
 
     onscroll = function() {
-        if(document.body.scrollTop > 4000) {
-            contact.style.top = contact.getBoundingClientRect().top + document.body.scrollTop + "px";
+        if(document.body.scrollTop < 680 ||
+            document.querySelector(".content").getBoundingClientRect().bottom < 570) {
+            if(document.body.scrollTop < 680) {
+                contact.style.top = "800px";
+            } else {
+                contact.style.top = (document.querySelector(".content").getBoundingClientRect().bottom + document.body.scrollTop - 450) + "px";
+            }
             contact.style.position = "absolute";
-        } else if(document.body.scrollTop > 680) {
-            contact.style.top = contact.getBoundingClientRect().top + "px";
-            contact.style.position = "fixed";
         } else {
-            contact.style.position = "absolute";
-            contact.style.top = "800px";
+            contact.style.position = "fixed";
+            contact.style.top = "120px";
         }
     }
-
     onscroll();
 </script>
 </body>

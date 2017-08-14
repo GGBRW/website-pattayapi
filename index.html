@@ -10,7 +10,7 @@
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -72,7 +72,7 @@
 
     <ul class="menu">
         <button class="close material-icons" onclick="this.parentNode.style.display = 'none'">close</button>
-        <li><img src="img/favicon.png" height="100"></li>
+        <li><img src="img/favicon.png" height="60"></li>
         <li><span style="color: #fff">Home</span></li>
         <li><a href="whatwedo/index.html">What we do</a></li>
         <li><a href="testimonials/index.html">Testimonials</a></li>
@@ -207,16 +207,18 @@
         var contact = document.querySelector(".contact-float");
 
         onscroll = function() {
-             if(document.body.scrollTop > 4000) {
-                contact.style.top = contact.getBoundingClientRect().top + document.body.scrollTop + "px";
-                contact.style.position = "absolute";
-            } else if(document.body.scrollTop > 680) {
-                contact.style.top = contact.getBoundingClientRect().top + "px";
-                contact.style.position = "fixed";
-            } else {
-                contact.style.position = "absolute";
-                contact.style.top = "800px";
-            }
+             if(document.body.scrollTop < 680 ||
+                 document.querySelector(".content").getBoundingClientRect().bottom < 570) {
+                 if(document.body.scrollTop < 680) {
+                     contact.style.top = "800px";
+                 } else {
+                     contact.style.top = (document.querySelector(".content").getBoundingClientRect().bottom + document.body.scrollTop - 450) + "px";
+                 }
+                 contact.style.position = "absolute";
+             } else {
+                 contact.style.position = "fixed";
+                 contact.style.top = "120px";
+             }
         }
 
         onscroll();

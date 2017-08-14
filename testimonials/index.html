@@ -72,7 +72,7 @@
 
 <ul class="menu">
     <button class="close material-icons" onclick="this.parentNode.style.display = 'none'">close</button>
-    <li><img src="../img/favicon.png" height="100"></li>
+    <li><img src="../img/favicon.png" height="60"></li>
     <li><a href="../index.html">Home</a></li>
     <li><a href="../whatwedo/index.html">What we do</a></li>
     <li><span style="color: #fff">Testimonials</span></li>
@@ -140,15 +140,17 @@
     var contact = document.querySelector(".contact-float");
 
     onscroll = function() {
-        if(document.body.scrollTop > 4000) {
-            contact.style.top = contact.getBoundingClientRect().top + document.body.scrollTop + "px";
+        if(document.body.scrollTop < 680 ||
+            document.querySelector(".content").getBoundingClientRect().bottom < 570) {
+            if(document.body.scrollTop < 680) {
+                contact.style.top = "800px";
+            } else {
+                contact.style.top = (document.querySelector(".content").getBoundingClientRect().bottom + document.body.scrollTop - 450) + "px";
+            }
             contact.style.position = "absolute";
-        } else if(document.body.scrollTop > 680) {
-            contact.style.top = contact.getBoundingClientRect().top + "px";
-            contact.style.position = "fixed";
         } else {
-            contact.style.position = "absolute";
-            contact.style.top = "800px";
+            contact.style.position = "fixed";
+            contact.style.top = "120px";
         }
     }
 
