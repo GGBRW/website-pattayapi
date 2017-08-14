@@ -203,7 +203,7 @@ section {
 section h1 {
     font-family: Montserrat;
     font-size: 25px;
-    margin: 40px 0 20px 0;
+    margin: 20px 0 20px 0;
 }
 
 section h2 {
@@ -362,6 +362,11 @@ section .video {
 
 .contact-float img {
     margin: 0;
+}
+
+.contact-float a {
+    text-decoration: none;
+    color: #000;
 }
 
 footer {
