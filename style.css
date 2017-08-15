@@ -312,12 +312,14 @@ section .video {
 }
 
 .sendmessage .submit {
+    -webkit-appearance: none;
     padding: 20px;
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 600;
     border: none;
     border-radius: 10px;
+    -webkit-border-radius: 10px;
     outline: none;
     background: #111A33;
     color: rgba(255,255,255,.8);

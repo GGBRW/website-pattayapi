@@ -23,48 +23,27 @@
     <header>
         <img class="logo" src="img/pattaya.png">
         <div class="slideshow">
+
             <div class="slide">
                 <img src="img/slideshow1.jpg">
             </div>
+
             <div class="slide">
                 <img src="img/slideshow2.jpg">
-                <span>Experts in Thai lady investigations</span>
-            </div>
-            <div class="slide">
-                <img src="img/slideshow3.jpg">
                 <span>Missing people investigations</span>
             </div>
+
             <div class="slide">
-                <img src="img/slideshow4.jpg">
+                <img src="img/slideshow3.jpg">
                 <span>Thailand debt recovery specialists</span>
             </div>
-            <script>
-                var slides = document.querySelectorAll(".slideshow .slide");
-                var slide = 0;
 
-                slides[0].style.display = "block";
-                setTimeout(function() {
-                slides[0].style.opacity = 1;
-                slides[0].style.transform = "translateY(0px)";
-                });
+            <div class="slide">
+                <img src="img/slideshow4.jpg">
+                <span>Experts in Thai lady investigations</span>
+            </div>
 
-                setInterval(function() {
-                    slides[(slide + 1) % 4].style.display = "block";
-                    setTimeout(function() {
-                        slides[slide].style.zIndex = 1;
-                        slides[(slide + 1) % 4].style.zIndex = 2;
-                        slides[(slide + 1) % 4].style.opacity = 1;
-                        slides[(slide + 1) % 4].style.transform = "translateY(0px)";
-                    }, 100);
-
-                    setTimeout(function() {
-                        slides[slide].style.display = "none";
-                        slides[slide].style.transform = "translateY(-100px)";
-                        slides[slide].style.opacity = 0;
-                        slide = ++slide % 4;
-                    }, 500);
-                }, 3000);
-            </script>
+            <script src="slideshow.js"></script>
         </div>
         <ul>
             <li><span style="color: #fff">Home</span></li>
@@ -214,12 +193,12 @@
         var contact = document.querySelector(".contact-float");
 
         onscroll = function() {
-             if(document.body.scrollTop < 680 ||
+             if((document.documentElement.scrollTop || document.body.scrollTop) < 680 ||
                  document.querySelector(".content").getBoundingClientRect().bottom < 570) {
-                 if(document.body.scrollTop < 680) {
+                 if((document.documentElement.scrollTop || document.body.scrollTop) < 680) {
                      contact.style.top = "800px";
                  } else {
-                     contact.style.top = (document.querySelector(".content").getBoundingClientRect().bottom + document.body.scrollTop - 450) + "px";
+                     contact.style.top = (document.querySelector(".content").getBoundingClientRect().bottom + (document.documentElement.scrollTop || document.body.scrollTop) - 450) + "px";
                  }
                  contact.style.position = "absolute";
              } else {

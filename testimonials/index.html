@@ -37,33 +37,7 @@
             <img src="../img/slideshow4.jpg">
             <span>Thailand debt recovery specialists</span>
         </div>
-        <script>
-            var slides = document.querySelectorAll(".slideshow .slide");
-            var slide = 0;
-
-            slides[0].style.display = "block";
-            setTimeout(function() {
-                slides[0].style.opacity = 1;
-                slides[0].style.transform = "translateY(0px)";
-            });
-
-            setInterval(function() {
-                slides[(slide + 1) % 4].style.display = "block";
-                setTimeout(function() {
-                    slides[slide].style.zIndex = 1;
-                    slides[(slide + 1) % 4].style.zIndex = 2;
-                    slides[(slide + 1) % 4].style.opacity = 1;
-                    slides[(slide + 1) % 4].style.transform = "translateY(0px)";
-                }, 100);
-
-                setTimeout(function() {
-                    slides[slide].style.display = "none";
-                    slides[slide].style.transform = "translateY(-100px)";
-                    slides[slide].style.opacity = 0;
-                    slide = ++slide % 4;
-                }, 500);
-            }, 3000);
-        </script>
+        <script src="../slideshow.js"></script>
     </div>
     <ul>
         <li><a href="../index.html">Home</a></li>
@@ -91,22 +65,22 @@
     <h1>Testimonials</h1>
     If you have instructed us in the past and would like to add your testimonial, please let us know.
     <div class="quote">
-        <img src="img/quote.png" height="64">
+        <img src="../img/quote.png" height="64">
         I just wanted to send my thanks to you and your team for the work you have done. The photographs of my wife with her boyfriend are going to be very valuable with our divorce proceedings. I have no doubt your work has saved me thousands of dollars.
         <p>— Michael, USA</p>
     </div>
     <div class="quote">
-        <img src="img/quote.png" height="64">
+        <img src="../img/quote.png" height="64">
         Pattaya PI have really gone the extra mile for me. Ian has kept me up to date with the investigation and supported me through the process and results. Thank you so much.
         <p>— Robert, Australia</p>
     </div>
     <div class="quote">
-        <img src="img/quote.png" height="64">
+        <img src="../img/quote.png" height="64">
         First I contacted a different company that were rude and unhelpful. PattayaPI were cheaper and after 2 hours the job was done. I would recommend this company to anyone
         <p>— Kimmo, Sweden</p>
     </div>
     <div class="quote">
-        <img src="img/quote.png" height="64">
+        <img src="../img/quote.png" height="64">
         Ian, I can't thank you and your team enough. The peace of mind you have given me was worth every penny, I can breath again!
         <p>— Anonymous</p>
     </div>
@@ -146,12 +120,12 @@
     var contact = document.querySelector(".contact-float");
 
     onscroll = function() {
-        if(document.body.scrollTop < 680 ||
+        if((document.documentElement.scrollTop || document.body.scrollTop) < 680 ||
             document.querySelector(".content").getBoundingClientRect().bottom < 570) {
-            if(document.body.scrollTop < 680) {
+            if((document.documentElement.scrollTop || document.body.scrollTop) < 680) {
                 contact.style.top = "800px";
             } else {
-                contact.style.top = (document.querySelector(".content").getBoundingClientRect().bottom + document.body.scrollTop - 450) + "px";
+                contact.style.top = (document.querySelector(".content").getBoundingClientRect().bottom + (document.documentElement.scrollTop || document.body.scrollTop) - 450) + "px";
             }
             contact.style.position = "absolute";
         } else {

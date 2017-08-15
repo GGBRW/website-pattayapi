@@ -37,33 +37,7 @@
             <img src="../img/slideshow4.jpg">
             <span>Thailand debt recovery specialists</span>
         </div>
-        <script>
-            var slides = document.querySelectorAll(".slideshow .slide");
-            var slide = 0;
-
-            slides[0].style.display = "block";
-            setTimeout(function() {
-                slides[0].style.opacity = 1;
-                slides[0].style.transform = "translateY(0px)";
-            });
-
-            setInterval(function() {
-                slides[(slide + 1) % 4].style.display = "block";
-                setTimeout(function() {
-                    slides[slide].style.zIndex = 1;
-                    slides[(slide + 1) % 4].style.zIndex = 2;
-                    slides[(slide + 1) % 4].style.opacity = 1;
-                    slides[(slide + 1) % 4].style.transform = "translateY(0px)";
-                }, 100);
-
-                setTimeout(function() {
-                    slides[slide].style.display = "none";
-                    slides[slide].style.transform = "translateY(-100px)";
-                    slides[slide].style.opacity = 0;
-                    slide = ++slide % 4;
-                }, 500);
-            }, 3000);
-        </script>
+        <script src="../slideshow.js"></script>
     </div>
     <ul>
         <li><a href="../index.html">Home</a></li>
@@ -82,9 +56,9 @@
     <li><a href="../index.html">Home</a></li>
     <li><a href="../whatwedo/index.html">What we do</a></li>
     <li><a href="../testimonials/index.html">Testimonials</a></li>
-    <li><span style="color: #fff">FAQ</span></li>
+    <li><a href="../faq/index.html">FAQ</a></li>
     <li><a href="https://pattayapi.com/blog/">Blog</a></li>
-    <li><a href="../contact/index.html">Contact</a></li>
+    <li><span style="color: #fff">Contact</span></li>
 </ul>
 
 <section class="content contact" style="display: block; margin: 100px auto">
